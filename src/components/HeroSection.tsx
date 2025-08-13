@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Star, Users, Calendar } from "lucide-react";
-import mihirPortrait from "@/assets/mihir-portrait.jpg";
+import mihirPortrait from "@/assets/mihir-profile.jpg";
 import templeBackground from "@/assets/temple-background.jpg";
 
 const HeroSection = () => {
