@@ -111,28 +111,20 @@ const ServicesSection = () => {
         <div className="text-center">
           <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-8 border border-accent/30 max-w-2xl mx-auto">
             <h3 className="font-serif text-2xl font-semibold text-primary mb-4">
-              Ready to Discover Your Path?
+              Get in Touch
             </h3>
             <p className="text-foreground/70 mb-6">
-              Every consultation is personalized to your unique situation. 
-              Let ancient wisdom illuminate your journey forward.
+              Connect with me directly through WhatsApp for any inquiries 
+              about astrological guidance and spiritual consultation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                variant="divine" 
-                size="lg"
-                onClick={scrollToContact}
-                className="px-8"
-              >
-                Book Consultation
-              </Button>
+            <div className="flex justify-center">
               <Button 
                 variant="wisdom" 
                 size="lg"
                 onClick={() => window.open('https://wa.me/919519822580', '_blank')}
                 className="px-8"
               >
-                Quick WhatsApp
+                WhatsApp Now
               </Button>
             </div>
           </div>
