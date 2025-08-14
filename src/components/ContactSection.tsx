@@ -6,7 +6,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Phone, Mail, MapPin, Clock, MessageCircle, Send, Instagram } from "lucide-react";
-import emailjs from '@emailjs/browser';
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -18,46 +17,20 @@ const ContactSection = () => {
   const {
     toast
   } = useToast();
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    try {
-      const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        phone: formData.phone,
-        subject: formData.subject,
-        message: formData.message,
-        to_name: "Mihir Shukla"
-      };
-
-      await emailjs.send(
-        'service_cf319dh',
-        'template_bhxxcmp',
-        templateParams,
-        'qZxzoeGkdE8dhqX3r'
-      );
-
-      toast({
-        title: "Message Sent Successfully!",
-        description: "Thank you for reaching out. Mihir will get back to you within 24 hours."
-      });
-
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        subject: "",
-        message: ""
-      });
-    } catch (error) {
-      console.error('EmailJS Error:', error);
-      toast({
-        title: "Message Failed to Send",
-        description: "There was an error sending your message. Please try contacting directly via WhatsApp or email.",
-        variant: "destructive"
-      });
-    }
+    // In a real application, you would send this data to your backend
+    toast({
+      title: "Message Sent!",
+      description: "Thank you for reaching out. I'll get back to you within 24 hours."
+    });
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      subject: "",
+      message: ""
+    });
   };
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -174,9 +147,7 @@ const ContactSection = () => {
           {/* Contact Form */}
           <Card className="border-accent/30 bg-card/80 backdrop-blur-sm">
             <CardHeader>
-              <CardTitle className="font-serif text-2xl text-primary">
-                Send a Message
-              </CardTitle>
+              <CardTitle className="font-serif text-2xl text-primary">Book a Slot / Send a Message </CardTitle>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
