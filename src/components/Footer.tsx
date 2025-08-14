@@ -1,4 +1,4 @@
-import { Heart, Star, Phone, Mail, MapPin } from "lucide-react";
+import { Heart, Star, Phone, Mail, MapPin, Instagram } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -47,7 +47,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-accent" />
-                <span>mihir.astrology@gmail.com</span>
+                <span>agnimihir202@gmail.com</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Instagram className="h-4 w-4 text-accent" />
+                <span>@astromihir_prayagraj</span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="h-4 w-4 text-accent" />

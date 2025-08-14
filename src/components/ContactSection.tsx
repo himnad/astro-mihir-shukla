@@ -11,7 +11,8 @@ import {
   MapPin, 
   Clock, 
   MessageCircle,
-  Send
+  Send,
+  Instagram
 } from "lucide-react";
 
 const ContactSection = () => {
@@ -86,7 +87,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-primary">Email</div>
-                    <div className="text-foreground/70">mihir.astrology@gmail.com</div>
+                    <div className="text-foreground/70">agnimihir202@gmail.com</div>
                   </div>
                 </div>
 
@@ -97,6 +98,16 @@ const ContactSection = () => {
                   <div>
                     <div className="font-semibold text-primary">Location</div>
                     <div className="text-foreground/70">Prayagraj, Uttar Pradesh, India</div>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="p-3 bg-gradient-divine rounded-lg">
+                    <Instagram className="h-6 w-6 text-primary-foreground" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-primary">Instagram</div>
+                    <div className="text-foreground/70">@astromihir_prayagraj</div>
                   </div>
                 </div>
 
@@ -145,10 +156,20 @@ const ContactSection = () => {
                   variant="sacred" 
                   size="lg" 
                   className="w-full justify-start"
-                  onClick={() => window.open('mailto:mihir.astrology@gmail.com', '_blank')}
+                  onClick={() => window.open('mailto:agnimihir202@gmail.com', '_blank')}
                 >
                   <Mail className="h-5 w-5 mr-3" />
                   Send Email
+                </Button>
+                
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="w-full justify-start"
+                  onClick={() => window.open('https://instagram.com/astromihir_prayagraj', '_blank')}
+                >
+                  <Instagram className="h-5 w-5 mr-3" />
+                  Follow on Instagram
                 </Button>
               </CardContent>
             </Card>
