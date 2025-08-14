@@ -5,16 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  MessageCircle,
-  Send,
-  Instagram
-} from "lucide-react";
-
+import { Phone, Mail, MapPin, Clock, MessageCircle, Send, Instagram } from "lucide-react";
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -23,14 +14,15 @@ const ContactSection = () => {
     subject: "",
     message: ""
   });
-  const { toast } = useToast();
-
+  const {
+    toast
+  } = useToast();
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // In a real application, you would send this data to your backend
     toast({
       title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you within 24 hours.",
+      description: "Thank you for reaching out. I'll get back to you within 24 hours."
     });
     setFormData({
       name: "",
@@ -40,16 +32,13 @@ const ContactSection = () => {
       message: ""
     });
   };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-
-  return (
-    <section id="contact" className="py-20 serenity-gradient">
+  return <section id="contact" className="py-20 serenity-gradient">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl lg:text-5xl font-bold text-primary mb-6">
@@ -118,7 +107,7 @@ const ContactSection = () => {
                   <div>
                     <div className="font-semibold text-primary">Consultation Hours</div>
                     <div className="text-foreground/70">9:00 AM - 8:00 PM (IST)</div>
-                    <div className="text-sm text-muted-foreground">Monday to Sunday</div>
+                    <div className="text-sm text-muted-foreground">Saturday & Sunday</div>
                   </div>
                 </div>
               </CardContent>
@@ -132,42 +121,22 @@ const ContactSection = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <Button 
-                  variant="divine" 
-                  size="lg" 
-                  className="w-full justify-start"
-                  onClick={() => window.open('https://wa.me/919519822580', '_blank')}
-                >
+                <Button variant="divine" size="lg" className="w-full justify-start" onClick={() => window.open('https://wa.me/919519822580', '_blank')}>
                   <MessageCircle className="h-5 w-5 mr-3" />
                   Message on WhatsApp
                 </Button>
                 
-                <Button 
-                  variant="wisdom" 
-                  size="lg" 
-                  className="w-full justify-start"
-                  onClick={() => window.open('tel:+919519822580', '_blank')}
-                >
+                <Button variant="wisdom" size="lg" className="w-full justify-start" onClick={() => window.open('tel:+919519822580', '_blank')}>
                   <Phone className="h-5 w-5 mr-3" />
                   Call Now
                 </Button>
                 
-                <Button 
-                  variant="sacred" 
-                  size="lg" 
-                  className="w-full justify-start"
-                  onClick={() => window.open('mailto:agnimihir202@gmail.com', '_blank')}
-                >
+                <Button variant="sacred" size="lg" className="w-full justify-start" onClick={() => window.open('mailto:agnimihir202@gmail.com', '_blank')}>
                   <Mail className="h-5 w-5 mr-3" />
                   Send Email
                 </Button>
                 
-                <Button 
-                  variant="outline" 
-                  size="lg" 
-                  className="w-full justify-start"
-                  onClick={() => window.open('https://instagram.com/astromihir_prayagraj', '_blank')}
-                >
+                <Button variant="outline" size="lg" className="w-full justify-start" onClick={() => window.open('https://instagram.com/astromihir_prayagraj', '_blank')}>
                   <Instagram className="h-5 w-5 mr-3" />
                   Follow on Instagram
                 </Button>
@@ -187,62 +156,27 @@ const ContactSection = () => {
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="name">Full Name</Label>
-                    <Input
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                    />
+                    <Input id="name" name="name" value={formData.name} onChange={handleChange} required />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="phone">Phone Number</Label>
-                    <Input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      required
-                    />
+                    <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} required />
                   </div>
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="email">Email Address</Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                  />
+                  <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required />
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="subject">Subject</Label>
-                  <Input
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    placeholder="e.g., Horoscope Reading, Marriage Muhurat, etc."
-                    required
-                  />
+                  <Input id="subject" name="subject" value={formData.subject} onChange={handleChange} placeholder="e.g., Horoscope Reading, Marriage Muhurat, etc." required />
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="message">Your Message</Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    rows={5}
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Please describe your requirements or questions..."
-                    required
-                  />
+                  <Textarea id="message" name="message" rows={5} value={formData.message} onChange={handleChange} placeholder="Please describe your requirements or questions..." required />
                 </div>
 
                 <Button type="submit" variant="divine" size="lg" className="w-full">
@@ -261,8 +195,6 @@ const ContactSection = () => {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;

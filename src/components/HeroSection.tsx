@@ -2,22 +2,20 @@ import { Button } from "@/components/ui/button";
 import { Star, Users, Calendar } from "lucide-react";
 import mihirPortrait from "@/assets/mihir-new-profile.jpg";
 import templeBackground from "@/assets/temple-background.jpg";
-
 const HeroSection = () => {
   const scrollToContact = () => {
     const element = document.getElementById('contact');
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${templeBackground})` }}
-      >
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+      backgroundImage: `url(${templeBackground})`
+    }}>
         <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/60 to-transparent"></div>
       </div>
 
@@ -52,19 +50,14 @@ const HeroSection = () => {
                 <span className="font-semibold">2000+ Consultations</span>
               </div>
               <div className="flex items-center gap-2 text-primary-foreground/80">
-                <Calendar className="h-5 w-5 text-accent" />
-                <span className="font-semibold">Available Daily</span>
+                
+                
               </div>
             </div>
 
             {/* CTA Button */}
             <div className="flex justify-center lg:justify-start">
-              <Button 
-                variant="wisdom" 
-                size="lg"
-                onClick={() => window.open('https://wa.me/919519822580', '_blank')}
-                className="text-lg px-8 py-6"
-              >
+              <Button variant="wisdom" size="lg" onClick={() => window.open('https://wa.me/919519822580', '_blank')} className="text-lg px-8 py-6">
                 WhatsApp Now
               </Button>
             </div>
@@ -74,11 +67,7 @@ const HeroSection = () => {
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
               <div className="ornate-border">
-                <img
-                  src={mihirPortrait}
-                  alt="Mihir Shukla - Expert Astrologer"
-                  className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-2xl"
-                />
+                <img src={mihirPortrait} alt="Mihir Shukla - Expert Astrologer" className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-2xl" />
               </div>
               {/* Decorative elements */}
               <div className="absolute -top-4 -left-4 w-20 h-20 bg-accent/30 rounded-full blur-xl"></div>
@@ -92,8 +81,6 @@ const HeroSection = () => {
       <div className="absolute top-20 left-10 w-6 h-6 bg-accent/40 rounded-full animate-pulse"></div>
       <div className="absolute bottom-20 right-20 w-4 h-4 bg-accent/50 rounded-full animate-pulse delay-1000"></div>
       <div className="absolute top-1/2 right-10 w-8 h-8 bg-accent/30 rounded-full animate-pulse delay-500"></div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
