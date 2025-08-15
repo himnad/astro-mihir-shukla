@@ -21,12 +21,16 @@ const ContactSection = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    console.log("Form submitted with data:", formData);
+    
     try {
       // Initialize EmailJS with public key
+      console.log("Initializing EmailJS...");
       emailjs.init("qZxzoeGkdE8dhqX3r");
       
+      console.log("Sending email via EmailJS...");
       // Send email using EmailJS
-      await emailjs.send(
+      const result = await emailjs.send(
         'service_cf319dh', // Service ID
         'template_bhxxcmp', // Template ID
         {
@@ -38,6 +42,8 @@ const ContactSection = () => {
           to_email: 'agnimihir202@gmail.com'
         }
       );
+      
+      console.log("EmailJS response:", result);
       
       toast({
         title: "Message Sent Successfully!",
