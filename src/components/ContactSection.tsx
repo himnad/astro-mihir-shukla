@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Phone, Mail, MapPin, Clock, MessageCircle, Send, Instagram } from "lucide-react";
-import emailjs from '@emailjs/browser';
+
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -18,55 +18,44 @@ const ContactSection = () => {
   const {
     toast
   } = useToast();
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    console.log("Form submitted with data:", formData);
+    // Create WhatsApp message with form data
+    const whatsappMessage = `
+*New Contact Form Submission*
+
+*Name:* ${formData.name}
+*Email:* ${formData.email}
+*Phone:* ${formData.phone}
+*Subject:* ${formData.subject}
+
+*Message:*
+${formData.message}
+
+_Sent from your website contact form_
+    `.trim();
     
-    try {
-      // Initialize EmailJS with public key
-      console.log("Initializing EmailJS...");
-      emailjs.init("qZxzoeGkdE8dhqX3r");
-      
-      console.log("Sending email via EmailJS...");
-      // Send email using EmailJS
-      const result = await emailjs.send(
-        'service_cf319dh', // Service ID
-        'template_bhxxcmp', // Template ID
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          phone: formData.phone,
-          subject: formData.subject,
-          message: formData.message,
-          to_email: 'agnimihir202@gmail.com'
-        }
-      );
-      
-      console.log("EmailJS response:", result);
-      
-      toast({
-        title: "Message Sent Successfully!",
-        description: "Thank you for reaching out. Mihir will get back to you within 24 hours."
-      });
-      
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        subject: "",
-        message: ""
-      });
-      
-    } catch (error) {
-      console.error('Email sending failed:', error);
-      toast({
-        title: "Failed to Send Message",
-        description: "Something went wrong. Please try again or contact directly via WhatsApp.",
-        variant: "destructive"
-      });
-    }
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const whatsappURL = `https://wa.me/919519822580?text=${encodedMessage}`;
+    
+    // Open WhatsApp with the message
+    window.open(whatsappURL, '_blank');
+    
+    toast({
+      title: "Redirecting to WhatsApp!",
+      description: "Your message has been prepared and WhatsApp is opening. Send the message to complete your inquiry."
+    });
+    
+    // Reset form
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      subject: "",
+      message: ""
+    });
   };
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
