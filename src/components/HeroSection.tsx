@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Star, Users, Calendar } from "lucide-react";
 import mihirPortrait from "@/assets/mihir-new-profile.jpg";
 import templeBackground from "@/assets/temple-background.jpg";
+import { seoConfig } from "@/config/seo";
 const HeroSection = () => {
   const scrollToContact = () => {
     const element = document.getElementById('contact');
@@ -25,18 +26,18 @@ const HeroSection = () => {
           {/* Text Content */}
           <div className="text-center lg:text-left">
             <h1 className="font-serif text-5xl lg:text-7xl font-bold text-primary-foreground mb-6">
-              Mihir Shukla
+              {seoConfig.heading}
             </h1>
             <p className="text-2xl lg:text-3xl text-primary-foreground/90 mb-4 font-medium">
-              Astrologer & Spiritual Guide
+              {seoConfig.subheading}
             </p>
             <p className="text-xl text-primary-foreground/80 mb-8 leading-relaxed">
               Guiding Your Path with Ancient Wisdom & Modern Insight
             </p>
             <p className="text-lg text-primary-foreground/70 mb-10 max-w-xl">
-              With 8+ years of expertise and over 2000 successful consultations, 
-              I help people find clarity, prosperity, and peace of mind through 
-              traditional astrology and spiritual guidance.
+              Astro Mihir Shukla brings 8+ years of expertise with over 2000 successful consultations. 
+              As a renowned astrologer in Prayagraj, I help people find clarity, prosperity, and peace of mind through 
+              traditional Vedic astrology, horoscope analysis, and comprehensive spiritual guidance.
             </p>
 
             {/* Stats */}
@@ -67,7 +68,7 @@ const HeroSection = () => {
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
               <div className="ornate-border">
-                <img src={mihirPortrait} alt="Mihir Shukla - Expert Astrologer" className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-2xl" />
+                <img src={mihirPortrait} alt="Astro Mihir Shukla - Expert Astrologer and Spiritual Guide in Prayagraj" className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-2xl" />
               </div>
               {/* Decorative elements */}
               <div className="absolute -top-4 -left-4 w-20 h-20 bg-accent/30 rounded-full blur-xl"></div>
