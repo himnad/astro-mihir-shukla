@@ -13,12 +13,11 @@ const HeroSection = () => {
     }
   };
   return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with enhanced golden overlay */}
+      {/* Background Image with enhanced overlay */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
       backgroundImage: `url(${templeBackground})`
     }}>
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-secondary/70 to-accent/60"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-mystical"></div>
       </div>
 
       {/* Floating cosmic orbs */}
@@ -32,16 +31,16 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="text-center lg:text-left">
-            <h1 className="font-serif text-5xl lg:text-7xl font-bold text-foreground drop-shadow-lg mb-6">
+            <h1 className="font-serif text-5xl lg:text-7xl font-bold text-primary-foreground mb-6">
               {seoConfig.heading}
             </h1>
-            <p className="text-2xl lg:text-3xl text-foreground/90 mb-4 font-medium drop-shadow-md">
+            <p className="text-2xl lg:text-3xl text-primary-foreground/90 mb-4 font-medium">
               {seoConfig.subheading}
             </p>
-            <p className="text-xl text-foreground/80 mb-8 leading-relaxed drop-shadow-sm">
+            <p className="text-xl text-primary-foreground/80 mb-8 leading-relaxed">
               Guiding Your Path with Ancient Wisdom & Modern Insight
             </p>
-            <p className="text-lg text-foreground/75 mb-10 max-w-xl drop-shadow-sm">
+            <p className="text-lg text-primary-foreground/70 mb-10 max-w-xl">
               Astro Mihir Shukla brings 8+ years of expertise with over 2000 successful consultations. 
               As a renowned astrologer in Prayagraj, I help people find clarity, prosperity, and peace of mind through 
               traditional Vedic astrology, horoscope analysis, and comprehensive spiritual guidance.
@@ -49,12 +48,12 @@ const HeroSection = () => {
 
             {/* Stats */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-8 mb-10">
-              <div className="flex items-center gap-2 text-foreground/80 drop-shadow-sm">
-                <Star className="h-5 w-5 text-accent drop-shadow-sm" />
+              <div className="flex items-center gap-2 text-primary-foreground/80">
+                <Star className="h-5 w-5 text-accent" />
                 <span className="font-semibold">8+ Years Experience</span>
               </div>
-              <div className="flex items-center gap-2 text-foreground/80 drop-shadow-sm">
-                <Users className="h-5 w-5 text-accent drop-shadow-sm" />
+              <div className="flex items-center gap-2 text-primary-foreground/80">
+                <Users className="h-5 w-5 text-accent" />
                 <span className="font-semibold">2000+ Consultations</span>
               </div>
               <div className="flex items-center gap-2 text-primary-foreground/80">
