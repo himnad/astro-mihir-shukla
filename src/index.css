@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Traditional Indian color palette */
+    /* Mystical astrology color palette */
     --background: 42 25% 96%;
     --foreground: 0 30% 15%;
 
@@ -18,37 +18,57 @@ All colors MUST be HSL.
     --popover: 42 30% 98%;
     --popover-foreground: 0 30% 15%;
 
-    /* Rich maroon primary */
-    --primary: 0 70% 35%;
+    /* Deep cosmic burgundy primary */
+    --primary: 350 75% 25%;
     --primary-foreground: 42 30% 98%;
+    --primary-glow: 350 65% 45%;
 
-    /* Deep blue secondary */
-    --secondary: 210 100% 20%;
+    /* Mystical purple secondary */
+    --secondary: 270 65% 35%;
     --secondary-foreground: 42 30% 98%;
+    --secondary-glow: 270 55% 55%;
 
-    /* Soft gold muted */
-    --muted: 45 60% 88%;
+    /* Soft cream muted */
+    --muted: 45 40% 92%;
     --muted-foreground: 0 20% 40%;
 
-    /* Golden accent */
+    /* Sacred gold accent */
     --accent: 45 90% 55%;
     --accent-foreground: 0 30% 15%;
+    --accent-glow: 45 85% 65%;
+
+    /* Spiritual orange */
+    --spiritual: 25 85% 55%;
+    --spiritual-foreground: 0 30% 15%;
+
+    /* Cosmic blue */
+    --cosmic: 220 75% 45%;
+    --cosmic-foreground: 42 30% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 42 30% 98%;
 
     --border: 45 30% 85%;
     --input: 45 30% 90%;
-    --ring: 0 70% 35%;
+    --ring: 350 75% 25%;
 
     --radius: 0.5rem;
 
-    /* Custom gradients and effects */
+    /* Enhanced gradients and effects */
     --gradient-divine: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
     --gradient-wisdom: linear-gradient(180deg, hsl(var(--secondary)), hsl(var(--primary)));
+    --gradient-cosmic: linear-gradient(45deg, hsl(var(--cosmic)), hsl(var(--secondary)));
+    --gradient-spiritual: linear-gradient(90deg, hsl(var(--spiritual)), hsl(var(--accent)));
     --gradient-serenity: linear-gradient(45deg, hsl(var(--accent) / 0.1), hsl(var(--primary) / 0.1));
+    --gradient-card: linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%);
+    --gradient-mystical: linear-gradient(120deg, hsl(var(--primary) / 0.8), hsl(var(--secondary) / 0.6), hsl(var(--cosmic) / 0.4));
+    
+    /* Enhanced shadows and glows */
     --ornate-shadow: 0 10px 30px -10px hsl(var(--primary) / 0.3);
     --divine-glow: 0 0 40px hsl(var(--accent) / 0.4);
+    --cosmic-glow: 0 0 60px hsl(var(--cosmic) / 0.3);
+    --mystical-glow: 0 10px 40px -5px hsl(var(--secondary) / 0.4);
+    --card-shadow: 0 4px 20px -2px hsl(var(--primary) / 0.1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -116,7 +136,7 @@ All colors MUST be HSL.
   }
 }
 
-/* Traditional ornate patterns and animations */
+/* Enhanced ornate patterns and animations */
 @layer components {
   .ornate-border {
     position: relative;
@@ -130,10 +150,19 @@ All colors MUST be HSL.
     border-radius: inherit;
     z-index: -1;
     opacity: 0.7;
+    animation: pulse-glow 3s ease-in-out infinite;
   }
 
   .divine-glow {
     box-shadow: var(--divine-glow);
+  }
+
+  .cosmic-glow {
+    box-shadow: var(--cosmic-glow);
+  }
+
+  .mystical-glow {
+    box-shadow: var(--mystical-glow);
   }
 
   .sacred-text {
@@ -143,11 +172,57 @@ All colors MUST be HSL.
     background-clip: text;
   }
 
+  .cosmic-text {
+    background: var(--gradient-cosmic);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
   .wisdom-gradient {
     background: var(--gradient-wisdom);
+  }
+
+  .cosmic-gradient {
+    background: var(--gradient-cosmic);
+  }
+
+  .spiritual-gradient {
+    background: var(--gradient-spiritual);
   }
 
   .serenity-gradient {
     background: var(--gradient-serenity);
   }
+
+  .mystical-gradient {
+    background: var(--gradient-mystical);
+  }
+
+  .floating-orb {
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .card-elevated {
+    background: var(--gradient-card);
+    box-shadow: var(--card-shadow);
+    border: 1px solid hsl(var(--accent) / 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .card-elevated:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--mystical-glow);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
 }
