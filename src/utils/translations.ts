@@ -1,0 +1,188 @@
+export const translations = {
+  en: {
+    // Navigation
+    'nav.home': 'Home',
+    'nav.about': 'About',
+    'nav.services': 'Services',
+    'nav.testimonials': 'Testimonials',
+    'nav.contact': 'Contact',
+    
+    // Hero Section
+    'hero.title': 'Astro Mihir Shukla',
+    'hero.subtitle': 'Vedic Astrologer & Spiritual Guide',
+    'hero.tagline': 'Guiding Your Path with Ancient Wisdom & Modern Insight',
+    'hero.description': 'Astro Mihir Shukla brings 8+ years of expertise with over 2000 successful consultations. As a renowned astrologer in Prayagraj, I help people find clarity, prosperity, and peace of mind through traditional Vedic astrology, horoscope analysis, and comprehensive spiritual guidance.',
+    'hero.experience': '8+ Years Experience',
+    'hero.consultations': '2000+ Consultations',
+    'hero.cta': 'WhatsApp Now',
+    
+    // About Section
+    'about.title': 'About Mihir Shukla',
+    'about.subtitle': 'Journey of Spiritual Discovery',
+    'about.description': 'Born and raised in the sacred city of Prayagraj, I have dedicated my life to the ancient science of Vedic astrology. My journey began with a deep fascination for celestial movements and their profound impact on human life.',
+    'about.journey': 'My Journey',
+    'about.journey.text': 'Starting from childhood curiosity about stars and planets, I pursued formal education in astrology and spent years under the guidance of renowned masters. Today, I combine traditional wisdom with practical insights to help people navigate life\'s challenges.',
+    'about.highlights.education': 'Traditional Education',
+    'about.highlights.education.desc': 'Trained under renowned Vedic astrology masters',
+    'about.highlights.learning': 'Continuous Learning',
+    'about.highlights.learning.desc': 'Always expanding knowledge through ancient texts and modern practice',
+    'about.highlights.guidance': 'Compassionate Guidance',
+    'about.highlights.guidance.desc': 'Providing personalized solutions with empathy and understanding',
+    'about.highlights.success': 'Proven Success',
+    'about.highlights.success.desc': 'Over 2000 satisfied clients across India and abroad',
+    
+    // Services Section
+    'services.title': 'Our Services',
+    'services.subtitle': 'Comprehensive Astrological Guidance',
+    'services.horoscope.title': 'Horoscope Creation',
+    'services.horoscope.desc': 'Detailed birth chart analysis with accurate predictions and life guidance based on planetary positions.',
+    'services.marriage.title': 'Marriage Muhurat',
+    'services.marriage.desc': 'Find the most auspicious time for your wedding ceremony according to Vedic astrology principles.',
+    'services.business.title': 'Business Muhurat',
+    'services.business.desc': 'Choose the perfect timing for business ventures, investments, and important financial decisions.',
+    'services.palmistry.title': 'Palmistry & Face Reading',
+    'services.palmistry.desc': 'Ancient art of reading palms and facial features to understand personality and future prospects.',
+    'services.kundali.title': 'Kundali Matching',
+    'services.kundali.desc': 'Comprehensive compatibility analysis for marriage proposals using traditional Vedic methods.',
+    'services.gemstone.title': 'Gemstone Consultation',
+    'services.gemstone.desc': 'Personalized gemstone recommendations to enhance positive energies and reduce negative influences.',
+    'services.contact': 'Get in Touch',
+    'services.contact.desc': 'Ready to discover what the stars have in store for you?',
+    
+    // Testimonials Section
+    'testimonials.title': 'What Our Clients Say',
+    'testimonials.subtitle': 'Real Stories, Real Results',
+    'testimonials.cta.title': 'Ready to Transform Your Life?',
+    'testimonials.cta.subtitle': 'Join thousands who have found guidance and clarity through our consultations',
+    'testimonials.stats.clients': 'Happy Clients',
+    'testimonials.stats.experience': 'Years Experience',
+    'testimonials.stats.confidential': 'Confidential',
+    'testimonials.stats.support': 'Support',
+    
+    // Contact Section
+    'contact.title': 'Get in Touch',
+    'contact.subtitle': 'Ready to unlock the secrets of your destiny? Contact me for a personalized consultation.',
+    'contact.phone': '+91 9519822580',
+    'contact.email': 'agnimihir202@gmail.com',
+    'contact.location': 'Prayagraj, UP, India',
+    'contact.instagram': '@astromihir_prayagraj',
+    'contact.hours': 'Available Daily 9 AM - 9 PM',
+    'contact.form.name': 'Full Name',
+    'contact.form.phone': 'Phone Number',
+    'contact.form.email': 'Email Address',
+    'contact.form.subject': 'Subject',
+    'contact.form.message': 'Your Message',
+    'contact.form.submit': 'Send Message',
+    'contact.form.note': 'All consultations are strictly confidential. I typically respond within 24 hours.',
+    
+    // Footer
+    'footer.about': 'Dedicated astrologer and spiritual guide from Prayagraj, bringing ancient wisdom to modern life. With 8+ years of experience and 2000+ successful consultations, I help people find clarity, prosperity, and peace of mind.',
+    'footer.trusted': 'Trusted by thousands across India',
+    'footer.services.title': 'Services',
+    'footer.contact.title': 'Contact',
+    'footer.copyright': '© {year} Mihir Shukla. All rights reserved.',
+    'footer.made': 'Made with',
+    'footer.made.for': 'for spiritual seekers',
+    'footer.disclaimer': 'Disclaimer: Astrological consultations are based on traditional Vedic astrology principles and are intended for guidance purposes only. Results may vary based on individual circumstances and cosmic influences.',
+    
+    // Common
+    'whatsapp': 'WhatsApp',
+    'call': 'Call',
+    'email': 'Email',
+    'instagram': 'Instagram',
+  },
+  hi: {
+    // Navigation  
+    'nav.home': 'होम',
+    'nav.about': 'परिचय',
+    'nav.services': 'सेवाएं',
+    'nav.testimonials': 'प्रशंसापत्र',
+    'nav.contact': 'संपर्क',
+    
+    // Hero Section
+    'hero.title': 'ज्योतिषी मिहिर शुक्ला',
+    'hero.subtitle': 'वैदिक ज्योतिषी एवं आध्यात्मिक गुरु',
+    'hero.tagline': 'प्राचीन ज्ञान और आधुनिक अंतर्दृष्टि से आपका मार्गदर्शन',
+    'hero.description': 'ज्योतिषी मिहिर शुक्ला 8+ वर्षों की विशेषज्ञता के साथ 2000+ सफल परामर्श प्रदान करते हैं। प्रयागराज के प्रसिद्ध ज्योतिषी के रूप में, मैं पारंपरिक वैदिक ज्योतिष, कुंडली विश्लेषण और व्यापक आध्यात्मिक मार्गदर्शन के माध्यम से लोगों को स्पष्टता, समृद्धि और मानसिक शांति पाने में मदद करता हूं।',
+    'hero.experience': '8+ वर्ष अनुभव',
+    'hero.consultations': '2000+ परामर्श',
+    'hero.cta': 'व्हाट्सऐप करें',
+    
+    // About Section
+    'about.title': 'मिहिर शुक्ला के बारे में',
+    'about.subtitle': 'आध्यात्मिक खोज की यात्रा',
+    'about.description': 'पवित्र शहर प्रयागराज में जन्मे और पले-बढ़े, मैंने अपना जीवन वैदिक ज्योतिष के प्राचीन विज्ञान को समर्पित किया है। मेरी यात्रा खगोलीय गतिविधियों और मानव जीवन पर उनके गहरे प्रभाव के लिए गहरे आकर्षण के साथ शुरू हुई।',
+    'about.journey': 'मेरी यात्रा',
+    'about.journey.text': 'तारों और ग्रहों के बारे में बचपन की जिज्ञासा से शुरू करके, मैंने ज्योतिष में औपचारिक शिक्षा प्राप्त की और प्रसिद्ध गुरुओं के मार्गदर्शन में वर्षों बिताए। आज, मैं जीवन की चुनौतियों से निपटने में लोगों की मदद करने के लिए पारंपरिक ज्ञान को व्यावहारिक अंतर्दृष्टि के साथ जोड़ता हूं।',
+    'about.highlights.education': 'पारंपरिक शिक्षा',
+    'about.highlights.education.desc': 'प्रसिद्ध वैदिक ज्योतिष गुरुओं के अधीन प्रशिक्षित',
+    'about.highlights.learning': 'निरंतर सीखना',
+    'about.highlights.learning.desc': 'प्राचीन ग्रंथों और आधुनिक अभ्यास के माध्यम से हमेशा ज्ञान का विस्तार',
+    'about.highlights.guidance': 'दयालु मार्गदर्शन',
+    'about.highlights.guidance.desc': 'सहानुभूति और समझ के साथ व्यक्तिगत समाधान प्रदान करना',
+    'about.highlights.success': 'सिद्ध सफलता',
+    'about.highlights.success.desc': 'भारत और विदेश में 2000+ संतुष्ट ग्राहक',
+    
+    // Services Section
+    'services.title': 'हमारी सेवाएं',
+    'services.subtitle': 'व्यापक ज्योतिषीय मार्गदर्शन',
+    'services.horoscope.title': 'कुंडली निर्माण',
+    'services.horoscope.desc': 'ग्रहों की स्थिति के आधार पर सटीक भविष्यवाणी और जीवन मार्गदर्शन के साथ विस्तृत जन्म चार्ट विश्लेषण।',
+    'services.marriage.title': 'विवाह मुहूर्त',
+    'services.marriage.desc': 'वैदिक ज्योतिष सिद्धांतों के अनुसार आपकी शादी के समारोह के लिए सबसे शुभ समय खोजें।',
+    'services.business.title': 'व्यापार मुहूर्त',
+    'services.business.desc': 'व्यापारिक उद्यमों, निवेश और महत्वपूर्ण वित्तीय निर्णयों के लिए सही समय चुनें।',
+    'services.palmistry.title': 'हस्तरेखा और मुखाकृति विज्ञान',
+    'services.palmistry.desc': 'व्यक्तित्व और भविष्य की संभावनाओं को समझने के लिए हथेलियों और चेहरे की विशेषताओं को पढ़ने की प्राचीन कला।',
+    'services.kundali.title': 'कुंडली मिलान',
+    'services.kundali.desc': 'पारंपरिक वैदिक विधियों का उपयोग करके विवाह प्रस्तावों के लिए व्यापक संगतता विश्लेषण।',
+    'services.gemstone.title': 'रत्न परामर्श',
+    'services.gemstone.desc': 'सकारात्मक ऊर्जा बढ़ाने और नकारात्मक प्रभावों को कम करने के लिए व्यक्तिगत रत्न सिफारिशें।',
+    'services.contact': 'संपर्क करें',
+    'services.contact.desc': 'जानने के लिए तैयार हैं कि सितारों में आपके लिए क्या है?',
+    
+    // Testimonials Section
+    'testimonials.title': 'हमारे ग्राहक क्या कहते हैं',
+    'testimonials.subtitle': 'वास्तविक कहानियां, वास्तविक परिणाम',
+    'testimonials.cta.title': 'अपने जीवन को बदलने के लिए तैयार हैं?',
+    'testimonials.cta.subtitle': 'हजारों लोगों के साथ जुड़ें जिन्होंने हमारे परामर्श के माध्यम से मार्गदर्शन और स्पष्टता पाई है',
+    'testimonials.stats.clients': 'खुश ग्राहक',
+    'testimonials.stats.experience': 'वर्ष अनुभव',
+    'testimonials.stats.confidential': 'गोपनीय',
+    'testimonials.stats.support': 'सहायता',
+    
+    // Contact Section
+    'contact.title': 'संपर्क करें',
+    'contact.subtitle': 'अपने भाग्य के रहस्यों को जानने के लिए तैयार हैं? व्यक्तिगत परामर्श के लिए मुझसे संपर्क करें।',
+    'contact.phone': '+91 9519822580',
+    'contact.email': 'agnimihir202@gmail.com',
+    'contact.location': 'प्रयागराज, उत्तर प्रदेश, भारत',
+    'contact.instagram': '@astromihir_prayagraj',
+    'contact.hours': 'दैनिक उपलब्ध सुबह 9 - रात 9 बजे',
+    'contact.form.name': 'पूरा नाम',
+    'contact.form.phone': 'फ़ोन नंबर',
+    'contact.form.email': 'ईमेल पता',
+    'contact.form.subject': 'विषय',
+    'contact.form.message': 'आपका संदेश',
+    'contact.form.submit': 'संदेश भेजें',
+    'contact.form.note': 'सभी परामर्श पूर्णतः गोपनीय हैं। मैं आमतौर पर 24 घंटों के भीतर जवाब देता हूं।',
+    
+    // Footer
+    'footer.about': 'प्रयागराज के समर्पित ज्योतिषी और आध्यात्मिक गुरु, प्राचीन ज्ञान को आधुनिक जीवन में लाते हैं। 8+ वर्षों के अनुभव और 2000+ सफल परामर्शों के साथ, मैं लोगों को स्पष्टता, समृद्धि और मानसिक शांति पाने में मदद करता हूं।',
+    'footer.trusted': 'पूरे भारत में हजारों लोगों द्वारा भरोसा',
+    'footer.services.title': 'सेवाएं',
+    'footer.contact.title': 'संपर्क',
+    'footer.copyright': '© {year} मिहिर शुक्ला। सभी अधिकार सुरक्षित।',
+    'footer.made': 'बनाया गया',
+    'footer.made.for': 'आध्यात्मिक खोजकर्ताओं के लिए',
+    'footer.disclaimer': 'अस्वीकरण: ज्योतिषीय परामर्श पारंपरिक वैदिक ज्योतिष सिद्धांतों पर आधारित हैं और केवल मार्गदर्शन उद्देश्यों के लिए हैं। व्यक्तिगत परिस्थितियों और ब्रह्मांडीय प्रभावों के आधार पर परिणाम भिन्न हो सकते हैं।',
+    
+    // Common
+    'whatsapp': 'व्हाट्सऐप',
+    'call': 'कॉल',
+    'email': 'ईमेल',
+    'instagram': 'इंस्टाग्राम',
+  }
+};
+
+export type TranslationKey = keyof typeof translations.en;

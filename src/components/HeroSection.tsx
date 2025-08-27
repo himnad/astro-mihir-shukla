@@ -3,7 +3,10 @@ import { Star, Users, Calendar } from "lucide-react";
 import mihirPortrait from "@/assets/mihir-new-profile.jpg";
 import templeBackground from "@/assets/temple-background.jpg";
 import { seoConfig } from "@/config/seo";
+import { useTranslation } from "@/hooks/useTranslation";
 const HeroSection = () => {
+  const { t } = useTranslation();
+  
   const scrollToContact = () => {
     const element = document.getElementById('contact');
     if (element) {
@@ -32,40 +35,34 @@ const HeroSection = () => {
           {/* Text Content */}
           <div className="text-center lg:text-left">
             <h1 className="font-serif text-5xl lg:text-7xl font-bold text-primary-foreground mb-6">
-              {seoConfig.heading}
+              {t('hero.title')}
             </h1>
             <p className="text-2xl lg:text-3xl text-primary-foreground/90 mb-4 font-medium">
-              {seoConfig.subheading}
+              {t('hero.subtitle')}
             </p>
             <p className="text-xl text-primary-foreground/80 mb-8 leading-relaxed">
-              Guiding Your Path with Ancient Wisdom & Modern Insight
+              {t('hero.tagline')}
             </p>
             <p className="text-lg text-primary-foreground/70 mb-10 max-w-xl">
-              Astro Mihir Shukla brings 8+ years of expertise with over 2000 successful consultations. 
-              As a renowned astrologer in Prayagraj, I help people find clarity, prosperity, and peace of mind through 
-              traditional Vedic astrology, horoscope analysis, and comprehensive spiritual guidance.
+              {t('hero.description')}
             </p>
 
             {/* Stats */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-8 mb-10">
               <div className="flex items-center gap-2 text-primary-foreground/80">
                 <Star className="h-5 w-5 text-accent" />
-                <span className="font-semibold">8+ Years Experience</span>
+                <span className="font-semibold">{t('hero.experience')}</span>
               </div>
               <div className="flex items-center gap-2 text-primary-foreground/80">
                 <Users className="h-5 w-5 text-accent" />
-                <span className="font-semibold">2000+ Consultations</span>
-              </div>
-              <div className="flex items-center gap-2 text-primary-foreground/80">
-                
-                
+                <span className="font-semibold">{t('hero.consultations')}</span>
               </div>
             </div>
 
             {/* Enhanced CTA Button */}
             <div className="flex justify-center lg:justify-start">
               <Button variant="cosmic" size="lg" onClick={() => window.open('https://wa.me/919519822580', '_blank')} className="text-lg px-8 py-6 animate-fade-in">
-                WhatsApp Now
+                {t('hero.cta')}
               </Button>
             </div>
           </div>

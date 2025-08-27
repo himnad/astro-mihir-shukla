@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { useTranslation } from "@/hooks/useTranslation";
+import LanguageToggle from "@/components/LanguageToggle";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useTranslation();
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -20,19 +23,20 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <button onClick={() => scrollToSection('home')} className="text-foreground hover:text-primary transition-colors">
-              Home
+              {t('nav.home')}
             </button>
             <button onClick={() => scrollToSection('about')} className="text-foreground hover:text-primary transition-colors">
-              About
+              {t('nav.about')}
             </button>
             <button onClick={() => scrollToSection('services')} className="text-foreground hover:text-primary transition-colors">
-              Services
+              {t('nav.services')}
             </button>
             <button onClick={() => scrollToSection('testimonials')} className="text-foreground hover:text-primary transition-colors">
-              Testimonials
+              {t('nav.testimonials')}
             </button>
+            <LanguageToggle />
             <Button variant="divine" onClick={() => scrollToSection('contact')}>
-              Contact
+              {t('nav.contact')}
             </Button>
           </div>
 
@@ -46,19 +50,22 @@ const Navigation = () => {
         {isOpen && <div className="md:hidden mt-4 py-4 border-t border-accent/20">
             <div className="flex flex-col space-y-4">
               <button onClick={() => scrollToSection('home')} className="text-left text-foreground hover:text-primary transition-colors">
-                Home
+                {t('nav.home')}
               </button>
               <button onClick={() => scrollToSection('about')} className="text-left text-foreground hover:text-primary transition-colors">
-                About
+                {t('nav.about')}
               </button>
               <button onClick={() => scrollToSection('services')} className="text-left text-foreground hover:text-primary transition-colors">
-                Services
+                {t('nav.services')}
               </button>
               <button onClick={() => scrollToSection('testimonials')} className="text-left text-foreground hover:text-primary transition-colors">
-                Testimonials
+                {t('nav.testimonials')}
               </button>
+              <div className="flex justify-start">
+                <LanguageToggle />
+              </div>
               <Button variant="divine" className="w-full justify-start" onClick={() => scrollToSection('contact')}>
-                Contact
+                {t('nav.contact')}
               </Button>
             </div>
           </div>}
