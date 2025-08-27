@@ -10,31 +10,34 @@ import {
   Gem, 
   Flower 
 } from "lucide-react";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const ServicesSection = () => {
+  const { t } = useTranslation();
+  
   const services = [
     {
       icon: <Calendar className="h-8 w-8" />,
-      title: "Horoscope Creation",
-      description: "Detailed birth chart analysis with personalized predictions and life guidance based on planetary positions.",
+      title: t('services.horoscope.title'),
+      description: t('services.horoscope.desc'),
       gradient: "bg-gradient-divine"
     },
     {
       icon: <Heart className="h-8 w-8" />,
-      title: "Marriage Muhurat Selection",
-      description: "Choose the most auspicious times for weddings to ensure harmony and prosperity in married life.",
+      title: t('services.marriage.title'),
+      description: t('services.marriage.desc'),
       gradient: "bg-gradient-wisdom"
     },
     {
       icon: <TrendingUp className="h-8 w-8" />,
-      title: "Business Muhurat",
-      description: "Select ideal timings for business ventures, deals, and important professional decisions.",
+      title: t('services.business.title'),
+      description: t('services.business.desc'),
       gradient: "bg-accent"
     },
     {
       icon: <Hand className="h-8 w-8" />,
-      title: "Palmistry",
-      description: "Read the lines of your hands to reveal insights about personality, health, and future events.",
+      title: t('services.palmistry.title'),
+      description: t('services.palmistry.desc'),
       gradient: "bg-secondary"
     },
     {
@@ -45,19 +48,19 @@ const ServicesSection = () => {
     },
     {
       icon: <Star className="h-8 w-8" />,
-      title: "Kundali Reading & Matching",
-      description: "Comprehensive horoscope analysis and compatibility checks for marriage and partnerships.",
+      title: t('services.kundali.title'),
+      description: t('services.kundali.desc'),
       gradient: "bg-gradient-divine"
     },
     {
       icon: <Gem className="h-8 w-8" />,
-      title: "Gemstone Recommendations",
-      description: "Personalized gemstone suggestions to enhance positive energies and balance planetary influences.",
+      title: t('services.gemstone.title'),
+      description: t('services.gemstone.desc'),
       gradient: "bg-gradient-wisdom"
     },
     {
       icon: <Flower className="h-8 w-8" />,
-      title: "Tantra & Worship Guidance",
+      title: "Spiritual Guidance",
       description: "Traditional rituals, puja guidance, and spiritual practices for inner peace and prosperity.",
       gradient: "bg-accent"
     }
@@ -75,11 +78,10 @@ const ServicesSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl lg:text-5xl font-bold text-primary mb-6">
-            Services & Expertise
+            {t('services.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Comprehensive astrological and spiritual services rooted in ancient wisdom, 
-            tailored to guide you through life's important decisions and challenges.
+            {t('services.subtitle')}
           </p>
         </div>
 
@@ -111,11 +113,10 @@ const ServicesSection = () => {
         <div className="text-center">
           <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-8 border border-accent/30 max-w-2xl mx-auto">
             <h3 className="font-serif text-2xl font-semibold text-primary mb-4">
-              Get in Touch
+              {t('services.contact')}
             </h3>
             <p className="text-foreground/70 mb-6">
-              Connect with me directly through WhatsApp for any inquiries 
-              about astrological guidance and spiritual consultation.
+              {t('services.contact.desc')}
             </p>
             <div className="flex justify-center">
               <Button 
@@ -124,7 +125,7 @@ const ServicesSection = () => {
                 onClick={() => window.open('https://wa.me/919519822580', '_blank')}
                 className="px-8"
               >
-                WhatsApp Now
+                {t('hero.cta')}
               </Button>
             </div>
           </div>

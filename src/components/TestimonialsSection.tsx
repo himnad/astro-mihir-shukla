@@ -1,7 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote } from "lucide-react";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const TestimonialsSection = () => {
+  const { t } = useTranslation();
+  
   const testimonials = [
     {
       name: "Priya S.",
@@ -46,11 +49,10 @@ const TestimonialsSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl lg:text-5xl font-bold text-primary mb-6">
-            What People Say
+            {t('testimonials.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Hear from those who have found clarity, peace, and prosperity through 
-            traditional astrological guidance and spiritual wisdom.
+            {t('testimonials.subtitle')}
           </p>
         </div>
 
@@ -95,28 +97,27 @@ const TestimonialsSection = () => {
         <div className="text-center mt-16">
           <div className="bg-gradient-serenity rounded-2xl p-8 border border-accent/30 max-w-4xl mx-auto">
             <h3 className="font-serif text-2xl font-semibold text-primary mb-4">
-              Join Thousands of Satisfied Seekers
+              {t('testimonials.cta.title')}
             </h3>
             <p className="text-foreground/70 text-lg leading-relaxed">
-              Over 2000 people have found their path to clarity and prosperity. 
-              Your journey toward understanding and peace of mind begins with a single consultation.
+              {t('testimonials.cta.subtitle')}
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-8">
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary mb-2">2000+</div>
-                <div className="text-sm text-muted-foreground">Happy Clients</div>
+                <div className="text-sm text-muted-foreground">{t('testimonials.stats.clients')}</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary mb-2">8+</div>
-                <div className="text-sm text-muted-foreground">Years Experience</div>
+                <div className="text-sm text-muted-foreground">{t('testimonials.stats.experience')}</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary mb-2">100%</div>
-                <div className="text-sm text-muted-foreground">Confidential</div>
+                <div className="text-sm text-muted-foreground">{t('testimonials.stats.confidential')}</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary mb-2">24/7</div>
-                <div className="text-sm text-muted-foreground">Support</div>
+                <div className="text-sm text-muted-foreground">{t('testimonials.stats.support')}</div>
               </div>
             </div>
           </div>

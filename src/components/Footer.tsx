@@ -1,6 +1,8 @@
 import { Heart, Star, Phone, Mail, MapPin, Instagram } from "lucide-react";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -10,52 +12,50 @@ const Footer = () => {
           {/* About */}
           <div className="lg:col-span-2">
             <h3 className="font-serif text-2xl font-bold mb-4">
-              Mihir Shukla
+              {t('hero.title')}
             </h3>
             <p className="text-primary-foreground/80 leading-relaxed mb-6">
-              Dedicated astrologer and spiritual guide from Prayagraj, bringing ancient wisdom 
-              to modern life. With 8+ years of experience and 2000+ successful consultations, 
-              I help people find clarity, prosperity, and peace of mind.
+              {t('footer.about')}
             </p>
             <div className="flex items-center gap-2 text-accent">
               <Star className="h-5 w-5" />
-              <span className="font-semibold">Trusted by thousands across India</span>
+              <span className="font-semibold">{t('footer.trusted')}</span>
             </div>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="font-semibold text-lg mb-4">Services</h4>
+            <h4 className="font-semibold text-lg mb-4">{t('footer.services.title')}</h4>
             <ul className="space-y-2 text-primary-foreground/80">
-              <li>Horoscope Creation</li>
-              <li>Marriage Muhurat</li>
-              <li>Business Muhurat</li>
-              <li>Palmistry & Face Reading</li>
-              <li>Kundali Matching</li>
-              <li>Gemstone Consultation</li>
+              <li>{t('services.horoscope.title')}</li>
+              <li>{t('services.marriage.title')}</li>
+              <li>{t('services.business.title')}</li>
+              <li>{t('services.palmistry.title')}</li>
+              <li>{t('services.kundali.title')}</li>
+              <li>{t('services.gemstone.title')}</li>
               <li>Spiritual Guidance</li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-semibold text-lg mb-4">Contact</h4>
+            <h4 className="font-semibold text-lg mb-4">{t('footer.contact.title')}</h4>
             <div className="space-y-3 text-primary-foreground/80">
               <div className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-accent" />
-                <span>+91 9519822580</span>
+                <span>{t('contact.phone')}</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-accent" />
-                <span>agnimihir202@gmail.com</span>
+                <span>{t('contact.email')}</span>
               </div>
               <div className="flex items-center gap-3">
                 <Instagram className="h-4 w-4 text-accent" />
-                <span>@astromihir_prayagraj</span>
+                <span>{t('contact.instagram')}</span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="h-4 w-4 text-accent" />
-                <span>Prayagraj, UP, India</span>
+                <span>{t('contact.location')}</span>
               </div>
             </div>
           </div>
@@ -65,10 +65,10 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-primary-foreground/60 text-sm">
-              © {currentYear} Mihir Shukla. All rights reserved.
+              {t('footer.copyright', { year: currentYear.toString() })}
             </div>
             <div className="flex items-center gap-2 text-primary-foreground/60 text-sm">
-              Made with <Heart className="h-4 w-4 text-accent" /> for spiritual seekers
+              {t('footer.made')} <Heart className="h-4 w-4 text-accent" /> {t('footer.made.for')}
             </div>
           </div>
         </div>
@@ -76,9 +76,7 @@ const Footer = () => {
         {/* Disclaimer */}
         <div className="mt-8 p-4 bg-primary-foreground/10 rounded-lg">
           <p className="text-xs text-primary-foreground/60 text-center leading-relaxed">
-            <strong>Disclaimer:</strong> Astrological consultations are based on traditional 
-            Vedic astrology principles and are intended for guidance purposes only. 
-            Results may vary based on individual circumstances and cosmic influences.
+            <strong>Disclaimer:</strong> {t('footer.disclaimer')}
           </p>
         </div>
       </div>
