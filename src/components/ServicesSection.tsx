@@ -42,8 +42,8 @@ const ServicesSection = () => {
     },
     {
       icon: <Eye className="h-8 w-8" />,
-      title: "Face Reading",
-      description: "Ancient art of understanding character traits and life patterns through facial features analysis.",
+      title: t('services.facereading.title'),
+      description: t('services.facereading.desc'),
       gradient: "bg-primary"
     },
     {
@@ -60,8 +60,8 @@ const ServicesSection = () => {
     },
     {
       icon: <Flower className="h-8 w-8" />,
-      title: "Spiritual Guidance",
-      description: "Traditional rituals, puja guidance, and spiritual practices for inner peace and prosperity.",
+      title: t('services.spiritual.title'),
+      description: t('services.spiritual.desc'),
       gradient: "bg-accent"
     }
   ];

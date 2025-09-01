@@ -33,7 +33,7 @@ const Footer = () => {
               <li>{t('services.palmistry.title')}</li>
               <li>{t('services.kundali.title')}</li>
               <li>{t('services.gemstone.title')}</li>
-              <li>Spiritual Guidance</li>
+              <li>{t('services.spiritual.title')}</li>
             </ul>
           </div>
 

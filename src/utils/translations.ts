@@ -46,6 +46,10 @@ export const translations = {
     'services.kundali.desc': 'Comprehensive compatibility analysis for marriage proposals using traditional Vedic methods.',
     'services.gemstone.title': 'Gemstone Consultation',
     'services.gemstone.desc': 'Personalized gemstone recommendations to enhance positive energies and reduce negative influences.',
+    'services.facereading.title': 'Face Reading',
+    'services.facereading.desc': 'Ancient art of understanding character traits and life patterns through facial features analysis.',
+    'services.spiritual.title': 'Spiritual Guidance',
+    'services.spiritual.desc': 'Traditional rituals, puja guidance, and spiritual practices for inner peace and prosperity.',
     'services.contact': 'Get in Touch',
     'services.contact.desc': 'Ready to discover what the stars have in store for you?',
     
@@ -138,6 +142,10 @@ export const translations = {
     'services.kundali.desc': 'पारंपरिक वैदिक विधियों का उपयोग करके विवाह प्रस्तावों के लिए व्यापक संगतता विश्लेषण।',
     'services.gemstone.title': 'रत्न परामर्श',
     'services.gemstone.desc': 'सकारात्मक ऊर्जा बढ़ाने और नकारात्मक प्रभावों को कम करने के लिए व्यक्तिगत रत्न सिफारिशें।',
+    'services.facereading.title': 'मुखाकृति विज्ञान',
+    'services.facereading.desc': 'चेहरे की विशेषताओं के विश्लेषण के माध्यम से चरित्र लक्षणों और जीवन पैटर्न को समझने की प्राचीन कला।',
+    'services.spiritual.title': 'आध्यात्मिक मार्गदर्शन',
+    'services.spiritual.desc': 'आंतरिक शांति और समृद्धि के लिए पारंपरिक अनुष्ठान, पूजा मार्गदर्शन और आध्यात्मिक अभ्यास।',
     'services.contact': 'संपर्क करें',
     'services.contact.desc': 'जानने के लिए तैयार हैं कि सितारों में आपके लिए क्या है?',
     
