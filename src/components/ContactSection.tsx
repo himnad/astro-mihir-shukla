@@ -81,56 +81,7 @@ _Sent from your website contact form_
           {/* Carousel with two slides */}
           <Carousel className="w-full">
             <CarouselContent>
-              {/* Slide 1: Book a Slot Form */}
-              <CarouselItem>
-                <Card className="border-accent/30 bg-card/80 backdrop-blur-sm">
-                  <CardHeader>
-                    <CardTitle className="font-serif text-2xl text-primary">Book a Slot / Send a Message</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                      <div className="grid md:grid-cols-2 gap-4">
-                        <div className="space-y-2">
-                          <Label htmlFor="name">{t('contact.form.name')}</Label>
-                          <Input id="name" name="name" value={formData.name} onChange={handleChange} required />
-                        </div>
-                        <div className="space-y-2">
-                          <Label htmlFor="phone">{t('contact.form.phone')}</Label>
-                          <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} required />
-                        </div>
-                      </div>
-
-                      <div className="space-y-2">
-                        <Label htmlFor="email">{t('contact.form.email')}</Label>
-                        <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required />
-                      </div>
-
-                      <div className="space-y-2">
-                        <Label htmlFor="subject">{t('contact.form.subject')}</Label>
-                        <Input id="subject" name="subject" value={formData.subject} onChange={handleChange} placeholder="e.g., Horoscope Reading, Marriage Muhurat, etc." required />
-                      </div>
-
-                      <div className="space-y-2">
-                        <Label htmlFor="message">{t('contact.form.message')}</Label>
-                        <Textarea id="message" name="message" rows={5} value={formData.message} onChange={handleChange} placeholder="Please describe your requirements or questions..." required />
-                      </div>
-
-                      <Button type="submit" variant="divine" size="lg" className="w-full">
-                        <Send className="h-5 w-5 mr-2" />
-                        {t('contact.form.submit')}
-                      </Button>
-                    </form>
-
-                    <div className="mt-6 p-4 bg-accent/10 rounded-lg">
-                      <p className="text-sm text-foreground/70 text-center">
-                        <strong>Note:</strong> {t('contact.form.note')}
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </CarouselItem>
-
-              {/* Slide 2: Get in Touch with Social Media */}
+              {/* Slide 1: Get in Touch with Social Media */}
               <CarouselItem>
                 <div className="grid md:grid-cols-2 gap-8">
                   {/* Contact Information */}
@@ -223,6 +174,55 @@ _Sent from your website contact form_
                     </CardContent>
                   </Card>
                 </div>
+              </CarouselItem>
+
+              {/* Slide 2: Book a Slot Form */}
+              <CarouselItem>
+                <Card className="border-accent/30 bg-card/80 backdrop-blur-sm">
+                  <CardHeader>
+                    <CardTitle className="font-serif text-2xl text-primary">Book a Slot / Send a Message</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <form onSubmit={handleSubmit} className="space-y-6">
+                      <div className="grid md:grid-cols-2 gap-4">
+                        <div className="space-y-2">
+                          <Label htmlFor="name">{t('contact.form.name')}</Label>
+                          <Input id="name" name="name" value={formData.name} onChange={handleChange} required />
+                        </div>
+                        <div className="space-y-2">
+                          <Label htmlFor="phone">{t('contact.form.phone')}</Label>
+                          <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} required />
+                        </div>
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label htmlFor="email">{t('contact.form.email')}</Label>
+                        <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required />
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label htmlFor="subject">{t('contact.form.subject')}</Label>
+                        <Input id="subject" name="subject" value={formData.subject} onChange={handleChange} placeholder="e.g., Horoscope Reading, Marriage Muhurat, etc." required />
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label htmlFor="message">{t('contact.form.message')}</Label>
+                        <Textarea id="message" name="message" rows={5} value={formData.message} onChange={handleChange} placeholder="Please describe your requirements or questions..." required />
+                      </div>
+
+                      <Button type="submit" variant="divine" size="lg" className="w-full">
+                        <Send className="h-5 w-5 mr-2" />
+                        {t('contact.form.submit')}
+                      </Button>
+                    </form>
+
+                    <div className="mt-6 p-4 bg-accent/10 rounded-lg">
+                      <p className="text-sm text-foreground/70 text-center">
+                        <strong>Note:</strong> {t('contact.form.note')}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
               </CarouselItem>
             </CarouselContent>
             
